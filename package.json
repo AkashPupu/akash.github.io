@@ -1,4 +1,5 @@
 {
+  "homepage":"https://akashpupu.github.io/akash.github.io/",
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
@@ -18,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
