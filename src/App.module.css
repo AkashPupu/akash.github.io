@@ -1,0 +1,44 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Seamless Section Flow - No Separators */
+.section {
+  position: relative;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app .globalShape1,
+  .app .globalShape2,
+  .app .globalShape3,
+  .app .globalShape4,
+  .app .globalShape5,
+  .app .globalShape6,
+  .app .globalShape7,
+  .app .globalShape8 {
+    display: none;
+  }
+  
+  .app::before,
+  .app::after {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .app::before,
+  .app::after {
+    opacity: 0.5;
+  }
+} 

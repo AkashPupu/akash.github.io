@@ -1,0 +1,392 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #a8b8f2 0%, #b89fd4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(168, 184, 242, 0.4) 0%, 
+    rgba(184, 159, 212, 0.4) 25%,
+    rgba(255, 188, 192, 0.4) 50%,
+    rgba(250, 226, 214, 0.4) 75%,
+    rgba(168, 184, 242, 0.4) 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Removed overlay for seamless flow */
+
+/* Floating Particles */
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.15), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: floatingParticles 20s linear infinite;
+  z-index: 2;
+}
+
+/* Geometric Shapes */
+.hero .shape1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  animation: float1 6s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.hero .shape2 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  top: 60%;
+  right: 15%;
+  animation: float2 8s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+.hero .shape3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.12);
+  transform: rotate(45deg);
+  top: 30%;
+  right: 20%;
+  animation: rotate 10s linear infinite;
+  z-index: 1;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.09);
+}
+
+.hero .shape4 {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  bottom: 20%;
+  left: 15%;
+  animation: pulse 4s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Additional Shapes */
+.hero .shape5 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  top: 10%;
+  right: 35%;
+  animation: float3 9s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.hero .shape6 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 4px solid rgba(255, 255, 255, 0.13);
+  transform: rotate(45deg);
+  top: 70%;
+  left: 5%;
+  animation: rotateReverse 12s linear infinite;
+  z-index: 1;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.07);
+}
+
+.hero .shape7 {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 50%;
+  top: 5%;
+  left: 50%;
+  animation: float4 7s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.hero .shape8 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  bottom: 10%;
+  right: 30%;
+  animation: wiggle 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hero .shape9 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  transform: rotate(45deg);
+  top: 40%;
+  left: 25%;
+  animation: bounceRotate 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.hero .shape10 {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border: 3px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  bottom: 40%;
+  right: 5%;
+  animation: breathe 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 15;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 
+    3px 3px 6px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+  color: #ffffff;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffd93d);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 3s ease infinite;
+  font-weight: 900;
+  text-shadow: none;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+  color: #f8f9fa;
+  font-weight: 500;
+}
+
+.cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Enhanced button styles for better visibility */
+.cta .btn {
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatingParticles {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(-10px) translateX(-10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(-35px) translateX(20px) scale(1.05); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(30px) translateX(-25px) scale(1.08); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(-40px) translateX(30px) scale(1.1); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(10px) translateX(-25px); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(45deg); }
+  100% { transform: rotate(405deg); }
+}
+
+@keyframes rotateReverse {
+  0% { transform: rotate(45deg); }
+  100% { transform: rotate(-315deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.25); opacity: 0.3; }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg) translateX(0px); }
+  25% { transform: rotate(5deg) translateX(5px); }
+  75% { transform: rotate(-5deg) translateX(-5px); }
+}
+
+@keyframes bounceRotate {
+  0%, 100% { transform: rotate(45deg) scale(1); }
+  50% { transform: rotate(225deg) scale(1.2); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.4); opacity: 0.4; }
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Wave Animation at Bottom */
+.hero .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.08));
+  clip-path: polygon(0 40%, 100% 70%, 100% 100%, 0% 100%);
+  animation: waveMove 3s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes waveMove {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heroContent {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+  
+  .hero .shape1,
+  .hero .shape2,
+  .hero .shape3,
+  .hero .shape4,
+  .hero .shape5,
+  .hero .shape6,
+  .hero .shape7,
+  .hero .shape8,
+  .hero .shape9,
+  .hero .shape10 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .heroContent {
+    padding: 25px 15px;
+  }
+} 

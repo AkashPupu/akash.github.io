@@ -1,0 +1,610 @@
+.work {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b89fd4 0%, #a8b8f2 50%, #b89fd4 100%);
+}
+
+/* Animated Background for Work Section */
+.work::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(184, 159, 212, 0.4) 0%, 
+    rgba(168, 184, 242, 0.4) 25%,
+    rgba(255, 188, 192, 0.4) 50%,
+    rgba(250, 226, 214, 0.4) 75%,
+    rgba(184, 159, 212, 0.4) 100%);
+  background-size: 400% 400%;
+  animation: workGradientShift 17s ease infinite;
+}
+
+/* Removed overlay for seamless flow */
+
+/* Floating Particles for Work */
+.work::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 35px 45px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 55px 85px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(2px 2px at 105px 55px, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 145px 95px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(2px 2px at 175px 45px, rgba(255,255,255,0.15), transparent);
+  background-repeat: repeat;
+  background-size: 250px 140px;
+  animation: workFloatingParticles 23s linear infinite;
+  z-index: 2;
+}
+
+/* Work Section Shapes */
+.work .workShape1 {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  top: 18%;
+  left: 10%;
+  animation: workFloat1 9s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.1);
+}
+
+.work .workShape2 {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  top: 75%;
+  right: 15%;
+  animation: workFloat2 11s ease-in-out infinite;
+  z-index: 1;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.09);
+}
+
+.work .workShape3 {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border: 2px solid rgba(255, 255, 255, 0.07);
+  transform: rotate(45deg);
+  top: 45%;
+  right: 20%;
+  animation: workRotate 13s linear infinite;
+  z-index: 1;
+}
+
+.work .workShape4 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  bottom: 20%;
+  left: 12%;
+  animation: workPulse 7s ease-in-out infinite;
+  z-index: 1;
+}
+
+.work .workShape5 {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  top: 8%;
+  right: 40%;
+  animation: workFloat3 12s ease-in-out infinite;
+  z-index: 1;
+}
+
+.work .workShape6 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  bottom: 12%;
+  right: 30%;
+  animation: workWiggle 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.work::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding: 80px 40px;
+  background: transparent;
+  border-radius: 0;
+  backdrop-filter: none;
+  border: none;
+}
+
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: 700;
+  text-shadow: 
+    3px 3px 6px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 3s ease infinite;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(255, 255, 255, 0.6) 50%, 
+    rgba(255, 255, 255, 0.4) 100%);
+  transform: translateX(-50%);
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Company Section Styles */
+.companySection {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.companyHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 15;
+}
+
+.companyMarker {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 4px rgba(255, 255, 255, 0.3), 
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  z-index: 16;
+  position: relative;
+}
+
+.companyMarker::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+}
+
+.companyInfo {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px 35px;
+  border-radius: 16px;
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.2),
+    0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 30px;
+  min-width: 450px;
+  text-align: left;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.companyInfo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+}
+
+.companyName {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.companyDuration {
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 600;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 8px 18px;
+  border-radius: 25px;
+  display: inline-block;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Roles Container */
+.rolesContainer {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.rolesContainer::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0.2) 100%);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Role Item Styles */
+.roleItem {
+  position: relative;
+  margin-bottom: 35px;
+  width: 47%;
+  padding: 0 25px;
+}
+
+.roleItem:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.roleItem:nth-child(even) {
+  left: 53%;
+  text-align: left;
+}
+
+.roleMarker {
+  position: absolute;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 2px rgba(255, 255, 255, 0.3), 
+    0 3px 8px rgba(0, 0, 0, 0.3);
+  z-index: 13;
+}
+
+.roleItem:nth-child(odd) .roleMarker {
+  right: -8px;
+}
+
+.roleItem:nth-child(even) .roleMarker {
+  left: -8px;
+}
+
+.roleContent {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.roleContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.roleContent:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.2),
+    0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.roleHeader {
+  margin-bottom: 12px;
+}
+
+.position {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 600;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 4px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.description {
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-start;
+}
+
+.roleItem:nth-child(odd) .technologies {
+  justify-content: flex-end;
+}
+
+.tech {
+  background: linear-gradient(135deg, #f59e0b, #f59e0b);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 3px 8px rgba(245, 158, 11, 0.4);
+}
+
+/* Work Section Animations */
+@keyframes workGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes workFloatingParticles {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-22px) translateX(18px); }
+  66% { transform: translateY(-12px) translateX(-12px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes workFloat1 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(-38px) translateX(28px) scale(1.06); }
+}
+
+@keyframes workFloat2 {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  50% { transform: translateY(32px) translateX(-35px) scale(1.08); }
+}
+
+@keyframes workFloat3 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-28px) translateX(22px); }
+}
+
+@keyframes workRotate {
+  0% { transform: rotate(45deg); }
+  100% { transform: rotate(405deg); }
+}
+
+@keyframes workPulse {
+  0%, 100% { transform: scale(1); opacity: 0.65; }
+  50% { transform: scale(1.28); opacity: 0.35; }
+}
+
+@keyframes workWiggle {
+  0%, 100% { transform: rotate(0deg) translateX(0px); }
+  25% { transform: rotate(4deg) translateX(4px); }
+  75% { transform: rotate(-4deg) translateX(-4px); }
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .work {
+    padding: 50px 0;
+  }
+
+  .content h2 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .timeline {
+    padding: 20px 10px;
+  }
+
+  .timeline::before {
+    left: 35px;
+    transform: none;
+    width: 3px;
+  }
+
+  .companySection {
+    margin-bottom: 50px;
+  }
+
+  .companyHeader {
+    justify-content: flex-start;
+    margin-left: 60px;
+    margin-bottom: 25px;
+  }
+
+  .companyMarker {
+    width: 24px;
+    height: 24px;
+    border: 5px solid white;
+  }
+
+  .companyMarker::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .companyInfo {
+    margin-left: 20px;
+    min-width: auto;
+    width: calc(100vw - 140px);
+    padding: 20px 25px;
+  }
+
+  .companyName {
+    font-size: 1.4rem;
+  }
+
+  .companyDuration {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+
+  .rolesContainer {
+    padding: 0 15px;
+  }
+
+  .rolesContainer::before {
+    left: 35px;
+    transform: none;
+  }
+
+  .roleItem {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding: 0 0 0 65px;
+    margin-bottom: 25px;
+  }
+
+  .roleMarker {
+    left: 27px !important;
+    right: auto !important;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    border: 3px solid white;
+  }
+
+  .roleContent {
+    padding: 20px;
+  }
+
+  .position {
+    font-size: 1.1rem;
+  }
+
+  .duration {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .technologies {
+    justify-content: flex-start !important;
+    gap: 5px;
+  }
+
+  .tech {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  
+  .work .workShape1,
+  .work .workShape2,
+  .work .workShape3,
+  .work .workShape4,
+  .work .workShape5,
+  .work .workShape6 {
+    display: none;
+  }
+} 
