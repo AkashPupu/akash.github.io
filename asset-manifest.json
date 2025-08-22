@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/akash.github.io/static/css/main.0083beec.css",
+    "main.js": "/akash.github.io/static/js/main.bcd2b98b.js",
+    "index.html": "/akash.github.io/index.html",
+    "main.0083beec.css.map": "/akash.github.io/static/css/main.0083beec.css.map",
+    "main.bcd2b98b.js.map": "/akash.github.io/static/js/main.bcd2b98b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0083beec.css",
+    "static/js/main.bcd2b98b.js"
+  ]
+}
